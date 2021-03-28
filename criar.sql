@@ -100,7 +100,7 @@ CREATE TABLE Episodio (
 );
 
 CREATE TABLE Qualidade (
-	resolucao INTEGER CONSTRAINT resolucaoValida CHECK (resolucao in (144, 240, 480, 720, 1080, 1440, 2160))
+	resolucao INTEGER PRIMARY KEY CONSTRAINT resolucaoValida CHECK (resolucao in (144, 240, 480, 720, 1080, 1440, 2160))
 );
 
 CREATE TABLE ConteudoEspecialQualidade(
