@@ -44,11 +44,11 @@ insert into Qualidade values (1080);
 insert into Qualidade values (1440);
 insert into Qualidade values (2160);
 
-insert into ConteudoEspecialQualidade values (4, 2160);
+insert into ConteudoEspecialQualidade values (4, 2160, "www.umconteudobemespecial.com");
 
-insert into FilmeQualidade values (2, 1080);
+insert into FilmeQualidade values (2, 1080, "www.umfilmefixe.com");
 
-insert into EpisodioQualidade values (1, 720);
+insert into EpisodioQualidade values (1, 720, "www.umhomemvaiparaoespacoechora.com");
 
 insert into Favorito values (1, 1);
 insert into Favorito values (1, 2);
