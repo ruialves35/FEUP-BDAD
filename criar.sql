@@ -23,7 +23,7 @@ DROP TABLE IF EXISTS Genero;
 DROP TABLE IF EXISTS Qualidade;
 
 CREATE TABLE Conta (
-	email TEXT PRIMARY KEY,
+	email TEXT PRIMARY KEY CONSTRAINT emailFormat CHECK (email LIKE '%_@__%.__%'),
 	password TEXT NOT NULL CONSTRAINT passwordLength CHECK (length(password) >= 5)
 );
 
