@@ -24,14 +24,14 @@ DROP TABLE IF EXISTS Qualidade;
 
 CREATE TABLE Conta (
 	email TEXT PRIMARY KEY,
-	password TEXT CONSTRAINT passwordLength CHECK (length(password) >= 5)
+	password TEXT NOT NULL CONSTRAINT passwordLength CHECK (length(password) >= 5)
 );
 
 CREATE TABLE Utilizador (
 	email TEXT PRIMARY KEY REFERENCES Conta,
-	pago INTEGER CONSTRAINT pagoIsBool CHECK (pago = 0 or pago = 1),
-	preco INTEGER CONSTRAINT precoPositivo CHECK (preco > 0),
-	premium INTEGER CONSTRAINT premiumIsBool CHECK (premium = 0 or premium = 1)
+	pago INTEGER NOT NULL CONSTRAINT pagoIsBool CHECK (pago = 0 or pago = 1),
+	preco INTEGER NOT NULL CONSTRAINT precoPositivo CHECK (preco > 0),
+	premium INTEGER NOT NULL CONSTRAINT premiumIsBool CHECK (premium = 0 or premium = 1)
 );
 
 CREATE TABLE Admin (
@@ -52,8 +52,8 @@ CREATE TABLE Conteudo (
 	titulo TEXT NOT NULL,
 	dataLancamento TEXT NOT NULL,
 	descricao TEXT,
-	idadeMinima INTEGER CONSTRAINT idadeMinima CHECK (idadeMinima > 0),
-	classificacao REAL CONSTRAINT classificacao CHECK (classificacao >= 0 and classificacao <= 5),
+	idadeMinima INTEGER NOT NULL CONSTRAINT idadeMinima CHECK (idadeMinima > 0),
+	classificacao REAL NOT NULL CONSTRAINT classificacao CHECK (classificacao >= 0 and classificacao <= 5),
 	estudio TEXT
 ); 
 
@@ -69,7 +69,7 @@ CREATE TABLE GeneroConteudo (
 
 CREATE TABLE Filme (
 	idConteudo INTEGER PRIMARY KEY REFERENCES Conteudo,
-	duracao REAL CONSTRAINT duracaoPositiva CHECK (duracao > 0),
+	duracao REAL NOT NULL CONSTRAINT duracaoPositiva CHECK (duracao > 0),
 	sinopse TEXT
 );
 
@@ -79,22 +79,22 @@ CREATE TABLE Serie (
 
 CREATE TABLE ConteudoEspecial (
 	idConteudo INTEGER PRIMARY KEY REFERENCES Conteudo,
-	duracao REAl CONSTRAINT duracaoPositiva CHECK (duracao > 0),
+	duracao REAl NOT NULL CONSTRAINT duracaoPositiva CHECK (duracao > 0),
 	sinopse TEXT,
 	idConteudoIncidido INTEGER REFERENCES Conteudo
 );
 
 CREATE TABLE Temporada (
 	idTemporada INTEGER PRIMARY KEY,
-	numero INTEGER CONSTRAINT numeroPositivo CHECK (numero > 0),
+	numero INTEGER NOT NULL CONSTRAINT numeroPositivo CHECK (numero > 0),
 	idSerie INTEGER REFERENCES Serie,
 	UNIQUE (numero, idSerie)
 );
 
 CREATE TABLE Episodio (
 	id INTEGER PRIMARY KEY,
-	duracao REAL CONSTRAINT duracaoPositiva CHECK (duracao > 0),
-	titulo TEXT,
+	duracao REAL NOT NULL CONSTRAINT duracaoPositiva CHECK (duracao > 0),
+	titulo TEXT NOT NULL,
 	sinopse TEXT,
 	idTemporada INTEGER REFERENCES Temporada
 );
