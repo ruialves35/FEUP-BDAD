@@ -50,7 +50,7 @@ CREATE TABLE Perfil (
 CREATE TABLE Conteudo (
 	id INTEGER PRIMARY KEY,
 	titulo TEXT NOT NULL,
-	dataLancamento TEXT NOT NULL,
+	dataLancamento TEXT NOT NULL CONSTRAINT dataLancamentoConteudo CHECK (strftime('%Y-%m-%d', dataLancamento) < strftime('%Y-%m-%d')),
 	descricao TEXT,
 	idadeMinima INTEGER NOT NULL CONSTRAINT idadeMinima CHECK (idadeMinima > 0),
 	classificacao REAL NOT NULL CONSTRAINT classificacao CHECK (classificacao >= 0 and classificacao <= 5),
@@ -133,7 +133,7 @@ CREATE TABLE Favorito (
 CREATE TABLE Historico (
 	idPerfil INTEGER REFERENCES Perfil ON DELETE CASCADE ON UPDATE CASCADE,
 	idConteudo INTEGER REFERENCES Conteudo ON DELETE CASCADE ON UPDATE CASCADE,
-	dataVisualizacao TEXT NOT NULL,
+	dataVisualizacao TEXT NOT NULL CONSTRAINT dataVisualizacaoHistorico CHECK (strftime('%Y-%m-%d', dataVisualizacao) < strftime('%Y-%m-%d')),
 	PRIMARY KEY (idPerfil, idConteudo)
 );
 
