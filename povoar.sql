@@ -60,6 +60,7 @@ INSERT INTO Filme VALUES (5, 130, "O calice Ardeu e o Harry foi procurar uma jus
 INSERT INTO Filme VALUES (6, 180, "Jackie perdeu os oculos e começaram lhe a bater porque ele nao via. Ele virou Lee Sin e começou a porrada.");
 
 INSERT INTO Serie VALUES (1);
+INSERT INTO Serie VALUES (3);
 INSERT INTO Serie VALUES (9);
 
 INSERT INTO ConteudoEspecial VALUES (4, 60, "Behind the Scene da série Queens Gambit", 3);
@@ -70,11 +71,15 @@ INSERT INTO Temporada VALUES (1, 1, 1);
 INSERT INTO Temporada VALUES (2, 1, 9);
 INSERT INTO Temporada VALUES (3, 2, 9);
 INSERT INTO Temporada VALUES (4, 3, 9);
+INSERT INTO Temporada VALUES (5, 1, 3);
+INSERT INTO Temporada VALUES (6, 2, 3);
 
 INSERT INTO Episodio VALUES (1, 24, "Naruto Episódio 1", "A aventura de Naruto começa", 1);
 INSERT INTO Episodio VALUES (2, 54, "Game of Thrones Episodio 2", "O inverno afinal nao e frio, isto vai aquecer.", 2);
 INSERT INTO Episodio VALUES (3, 58, "Game of Thrones Episodio 3", "Ja esta quente, tudo a batatada", 3);
 INSERT INTO Episodio VALUES (4, 53, "Game of Thrones Ultimo Episodio", "Nao e o ultimo, vamos fazer mais para ganhar mais dinheiro", 4);
+INSERT INTO Episodio VALUES (5, 60, "Queens Gambit and the gamble", "As apostas comecam", 5);
+INSERT INTO Episodio VALUES (6, 58, "The mastermind", "As mentes brilhantes chocam", 6);
 
 INSERT INTO Qualidade VALUES (144);
 INSERT INTO Qualidade VALUES (240);
@@ -91,20 +96,33 @@ INSERT INTO ConteudoEspecialQualidade VALUES (7, 2160, "www.jackie.com");
 
 INSERT INTO FilmeQualidade VALUES (2, 1080, "www.umfilmefixe.com");
 INSERT INTO FilmeQualidade VALUES (2, 2160, "www.umfilmebemfixe.com");
+INSERT INTO FilmeQualidade VALUES (5, 720, "www.umfilmenice.com");
+INSERT INTO FilmeQualidade VALUES (6, 1080, "www.umfilmetop.com");
 
 INSERT INTO EpisodioQualidade VALUES (1, 720, "www.umhomemvaiparaoespacoechora.com");
 INSERT INTO EpisodioQualidade VALUES (1, 1080, "www.umhomemvaiparaoespacoechoramuito.com");
 INSERT INTO EpisodioQualidade VALUES (2, 720, "www.invernoquentinho.com");
 INSERT INTO EpisodioQualidade VALUES (3, 1080, "www.invernoaarder.com");
 INSERT INTO EpisodioQualidade VALUES (4, 2160, "www.naoeoultimoepisodio.com");
+INSERT INTO EpisodioQualidade VALUES (5, 1080, "www.megadownload.com");
+INSERT INTO EpisodioQualidade VALUES (6, 1080, "www.megadownload.com");
 
 INSERT INTO Favorito VALUES (1, 1);
 INSERT INTO Favorito VALUES (1, 2);
+INSERT INTO Favorito VALUES (2, 3);
+INSERT INTO Favorito VALUES (3, 4);
+INSERT INTO Favorito VALUES (3, 5);
+INSERT INTO Favorito VALUES (4, 6);
 
 INSERT INTO Historico VALUES (1, 1, strftime('%Y-%m-%d', "2021-01-01", 'utc'));
 INSERT INTO Historico VALUES (1, 2, strftime('%Y-%m-%d', "2021-02-21", 'utc'));
 INSERT INTO Historico VALUES (1, 4, strftime('%Y-%m-%d', "2021-03-26", 'utc'));
+INSERT INTO Historico VALUES (2, 3, strftime('%Y-%m-%d', "2021-02-14", 'utc'));
+INSERT INTO Historico VALUES (3, 4, strftime('%Y-%m-%d', "2021-03-28", 'utc'));
+INSERT INTO Historico VALUES (3, 5, strftime('%Y-%m-%d', "2021-03-12", 'utc'));
+INSERT INTO Historico VALUES (4, 6, strftime('%Y-%m-%d', "2021-03-20", 'utc'));
 
 INSERT INTO Recomendado VALUES (1, 3, 97);
-INSERT INTO Recomendado VALUES (2, 3, 90);
+INSERT INTO Recomendado VALUES (2, 4, 90);
 INSERT INTO Recomendado VALUES (3, 9, 77);
+INSERT INTO Recomendado VALUES (4, 7, 77);
