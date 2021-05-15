@@ -1,2 +1,2 @@
-drop if exists FavoritoNoHistorico;
-drop if exists RecomendadoNaoVisto;
+drop trigger if exists FavoritoNoHistorico;
+drop trigger if exists RecomendadoNaoVisto;
