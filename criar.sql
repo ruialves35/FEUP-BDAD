@@ -93,6 +93,7 @@ CREATE TABLE Temporada (
 
 CREATE TABLE Episodio (
 	id INTEGER PRIMARY KEY,
+	num INTEGER NOT NULL CONSTRAINT num CHECK (num > 0),
 	duracao REAL NOT NULL CONSTRAINT duracaoPositiva CHECK (duracao > 0),
 	titulo TEXT NOT NULL,
 	sinopse TEXT,

@@ -21,7 +21,6 @@ INSERT INTO Perfil VALUES (3, "perfil3", "www.imagem3.com", "ES", "sqlite@gmail.
 INSERT INTO Perfil VALUES (4, "perfil4", "www.imagem4.com", "FR", "mongodb@gmail.com");
 INSERT INTO Perfil VALUES (5, "perfil5", "www.imagem5.com", "EN", "hannamontana@gmail.com");
 
-
 INSERT INTO Conteudo VALUES (1, "Naruto", strftime('%Y-%m-%d', "2002-10-03", 'utc'), "Um rapaz encontra uma rapoza de 9 caudas e juntos vao numa aventura", 9, 5, "Studio Pierrot");
 INSERT INTO Conteudo VALUES (2, "Interstellar", strftime('%Y-%m-%d', "2014-06-11",'utc'), "Um homem sente a responsabilidade de ir para o espaço para encontrar um planeta habitável", 14, 5, "Warner Bros");
 INSERT INTO Conteudo VALUES (3, "Queens Gambit", strftime('%Y-%m-%d', "2020-10-23", 'utc'), "Uma rapariga perde os seus pais em criança e descobre a sua paixao no xadrez", 15, 4.3, "Netflix");
@@ -74,12 +73,13 @@ INSERT INTO Temporada VALUES (4, 3, 9);
 INSERT INTO Temporada VALUES (5, 1, 3);
 INSERT INTO Temporada VALUES (6, 2, 3);
 
-INSERT INTO Episodio VALUES (1, 24, "Naruto Episódio 1", "A aventura de Naruto começa", 1);
-INSERT INTO Episodio VALUES (2, 54, "Game of Thrones Episodio 2", "O inverno afinal nao e frio, isto vai aquecer.", 2);
-INSERT INTO Episodio VALUES (3, 58, "Game of Thrones Episodio 3", "Ja esta quente, tudo a batatada", 3);
-INSERT INTO Episodio VALUES (4, 53, "Game of Thrones Ultimo Episodio", "Nao e o ultimo, vamos fazer mais para ganhar mais dinheiro", 4);
-INSERT INTO Episodio VALUES (5, 60, "Queens Gambit and the gamble", "As apostas comecam", 5);
-INSERT INTO Episodio VALUES (6, 58, "The mastermind", "As mentes brilhantes chocam", 6);
+INSERT INTO Episodio VALUES (1, 1, 24, "Naruto Episódio 1", "A aventura de Naruto começa", 1);
+INSERT INTO Episodio VALUES (2, 2, 54, "Game of Thrones Episodio 2", "O inverno afinal nao e frio, isto vai aquecer.", 2);
+INSERT INTO Episodio VALUES (3, 3, 58, "Game of Thrones Episodio 3", "Ja esta quente, tudo a batatada", 3);
+INSERT INTO Episodio VALUES (7, 4, 58, "Game of Thrones Episodio 4", "Morreram os bons?", 3);
+INSERT INTO Episodio VALUES (4, 4, 53, "Game of Thrones Ultimo Episodio", "Nao e o ultimo, vamos fazer mais para ganhar mais dinheiro", 4);
+INSERT INTO Episodio VALUES (5, 1, 60, "Queens Gambit and the gamble", "As apostas comecam", 5);
+INSERT INTO Episodio VALUES (6, 1, 58, "The mastermind", "As mentes brilhantes chocam", 6);
 
 INSERT INTO Qualidade VALUES (144);
 INSERT INTO Qualidade VALUES (240);
@@ -103,6 +103,7 @@ INSERT INTO EpisodioQualidade VALUES (1, 720, "www.umhomemvaiparaoespacoechora.c
 INSERT INTO EpisodioQualidade VALUES (1, 1080, "www.umhomemvaiparaoespacoechoramuito.com");
 INSERT INTO EpisodioQualidade VALUES (2, 720, "www.invernoquentinho.com");
 INSERT INTO EpisodioQualidade VALUES (3, 1080, "www.invernoaarder.com");
+INSERT INTO EpisodioQualidade VALUES (3, 2160, "www.invernoaarder2.com");
 INSERT INTO EpisodioQualidade VALUES (4, 2160, "www.naoeoultimoepisodio.com");
 INSERT INTO EpisodioQualidade VALUES (5, 1080, "www.megadownload.com");
 INSERT INTO EpisodioQualidade VALUES (6, 1080, "www.megadownload.com");
