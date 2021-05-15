@@ -7,10 +7,10 @@ INSERT INTO Conta VALUES ("hannamontana@gmail.com", "montanha");
 INSERT INTO Conta VALUES ("mongodb@gmail.com", "mongo");
 INSERT INTO Conta VALUES ("mulherdoadmin@gmail.com", "admina123");
 
-INSERT INTO Utilizador VALUES ("user1@gmail.com", 1, 15, 1);
-INSERT INTO Utilizador VALUES ("sqlite@gmail.com", 0, 10, 1);
-INSERT INTO Utilizador VALUES ("mongodb@gmail.com", 1, 5, 0);
-INSERT INTO Utilizador VALUES ("hannamontana@gmail.com", 0, 5, 0);
+INSERT INTO Utilizador VALUES ("user1@gmail.com", 1, 1);
+INSERT INTO Utilizador VALUES ("sqlite@gmail.com", 0, 1);
+INSERT INTO Utilizador VALUES ("mongodb@gmail.com", 1, 0);
+INSERT INTO Utilizador VALUES ("hannamontana@gmail.com", 0, 0);
 
 INSERT INTO Admin VALUES ("admin@gmail.com", "Sr. Vigilante");
 INSERT INTO Admin VALUES ("mulherdoadmin@gmail.com", "Sra. Vigilante");

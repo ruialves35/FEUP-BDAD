@@ -30,9 +30,13 @@ CREATE TABLE Conta (
 CREATE TABLE Utilizador (
 	email TEXT PRIMARY KEY REFERENCES Conta ON DELETE CASCADE ON UPDATE CASCADE,
 	pago INTEGER NOT NULL CONSTRAINT pagoIsBool CHECK (pago = 0 or pago = 1),
-	preco INTEGER NOT NULL CONSTRAINT precoPositivo CHECK (preco > 0),
 	premium INTEGER NOT NULL CONSTRAINT premiumIsBool CHECK (premium = 0 or premium = 1) DEFAULT (0)
 );
+
+create view if not exists PrecoUtilizador
+as select email, premium * 10 + 5 * (
+	select count(*) from Perfil where emailUtilizador=email
+) as preco from Utilizador;
 
 CREATE TABLE Admin (
 	email TEXT PRIMARY KEY REFERENCES Conta ON DELETE CASCADE ON UPDATE CASCADE,
