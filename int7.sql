@@ -1,22 +1,16 @@
-/*
-1. EASY - operador IN
-2. EASY - JOIN / NOT IN
-3. MEDIUM - MAX / MULTIPLE JOINS / IN / WHERES
-4. MEDIUM - SUM / COUNT / JOIN / GROUP BY
-5. EASY - > / NOT IN 
-6. IN / MAX / OR
-7. VIEWS / COUNT / JOIN / IN/ GROUP BY
+.mode columns
+.headers on
+.nullvalue NULL
 
-*/
-
-/* Esta interrogação destina-se a ir buscar uma contagem do género dos filmes
+/* 
+	Esta interrogação destina-se a ir buscar uma contagem do género dos filmes
 	que o perfil de um utilizador (neste caso o perfil de id 1) viu, mas que
 	não adicionou aos favoritos. Para além disso, inclui a percentagem de cada categoria.
 */
 
-DROP VIEW FavoritosUtilizador;
-DROP VIEW HistoricoUtilizador;
-DROP VIEW ConteudoGeneroInfo;
+DROP VIEW IF EXISTS FavoritosUtilizador;
+DROP VIEW IF EXISTS HistoricoUtilizador;
+DROP VIEW IF EXISTS ConteudoGeneroInfo;
 
 CREATE VIEW FavoritosUtilizador AS
 SELECT *

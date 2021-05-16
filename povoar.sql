@@ -24,8 +24,8 @@ INSERT INTO Perfil VALUES (5, "perfil5", "www.imagem5.com", "EN", "hannamontana@
 INSERT INTO Conteudo VALUES (1, "Naruto", strftime('%Y-%m-%d', "2002-10-03", 'utc'), "Um rapaz encontra uma rapoza de 9 caudas e juntos vao numa aventura", 9, 5, "Studio Pierrot");
 INSERT INTO Conteudo VALUES (2, "Interstellar", strftime('%Y-%m-%d', "2014-06-11",'utc'), "Um homem sente a responsabilidade de ir para o espaço para encontrar um planeta habitável", 14, 5, "Warner Bros");
 INSERT INTO Conteudo VALUES (3, "Queens Gambit", strftime('%Y-%m-%d', "2020-10-23", 'utc'), "Uma rapariga perde os seus pais em criança e descobre a sua paixao no xadrez", 15, 4.3, "Netflix");
-INSERT INTO Conteudo VALUES (4, "Queens Gambit Behind the Scenes", strftime('%Y-%m-%d', "2020-10-24", 'utc'), "Behind the scenes da série de sucesso: Queens Gambit", 15, 4, "Netflix");
-INSERT INTO Conteudo VALUES (5, "Harry Potter: Calice de Fogo", strftime('%Y-%m-%d', "2005-10-24", 'utc'), "Um maluco com uma varinha magica", 8, 5, "Warner Bros");
+INSERT INTO Conteudo VALUES (4, "Queens Gambit Behind the Scenes", strftime('%Y-%m-%d', "2020-10-24", 'utc'), "Behind the scenes da série de sucesso: Queens Gambit", 15, 4.8, "Netflix");
+INSERT INTO Conteudo VALUES (5, "Harry Potter: Calice de Fogo", strftime('%Y-%m-%d', "2005-10-24", 'utc'), "Um maluco com uma varinha magica", 8, 4.2, "Warner Bros");
 INSERT INTO Conteudo VALUES (6, "Jackie Chan", strftime('%Y-%m-%d', "1999-07-29", 'utc'), "Um honesto asiatico que perdeu os oculos e comecou a andar a porrada", 12, 4.5, "Golden Harvest");
 INSERT INTO Conteudo VALUES (7, "Jackie Chan: Behind the Scenes", strftime('%Y-%m-%d', "1999-07-30", 'utc'), "Behind the scenes do filme: Jackie Chan", 8, 4, "Golden Harvest");
 INSERT INTO Conteudo VALUES (8, "Harry Potter Behind the Scenes", strftime('%Y-%m-%d', "2005-10-27", 'utc'), "Behind the scenes do filme: Harry Potter", 8, 4.7, "Warner Bros");
@@ -123,6 +123,7 @@ INSERT INTO Historico VALUES (1, 7, strftime('%Y-%m-%d', "2021-03-29", 'utc'));
 INSERT INTO Historico VALUES (2, 3, strftime('%Y-%m-%d', "2021-02-14", 'utc'));
 INSERT INTO Historico VALUES (3, 4, strftime('%Y-%m-%d', "2021-03-28", 'utc'));
 INSERT INTO Historico VALUES (3, 5, strftime('%Y-%m-%d', "2021-03-12", 'utc'));
+INSERT INTO Historico VALUES (3, 2, strftime('%Y-%m-%d', "2021-03-12", 'utc'));
 INSERT INTO Historico VALUES (4, 6, strftime('%Y-%m-%d', "2021-03-20", 'utc'));
 
 INSERT INTO Recomendado VALUES (1, 3, 97);
