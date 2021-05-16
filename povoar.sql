@@ -118,6 +118,8 @@ INSERT INTO Favorito VALUES (4, 6);
 INSERT INTO Historico VALUES (1, 1, strftime('%Y-%m-%d', "2021-01-01", 'utc'));
 INSERT INTO Historico VALUES (1, 2, strftime('%Y-%m-%d', "2021-02-21", 'utc'));
 INSERT INTO Historico VALUES (1, 4, strftime('%Y-%m-%d', "2021-03-26", 'utc'));
+INSERT INTO Historico VALUES (1, 5, strftime('%Y-%m-%d', "2021-03-29", 'utc'));
+INSERT INTO Historico VALUES (1, 7, strftime('%Y-%m-%d', "2021-03-29", 'utc'));
 INSERT INTO Historico VALUES (2, 3, strftime('%Y-%m-%d', "2021-02-14", 'utc'));
 INSERT INTO Historico VALUES (3, 4, strftime('%Y-%m-%d', "2021-03-28", 'utc'));
 INSERT INTO Historico VALUES (3, 5, strftime('%Y-%m-%d', "2021-03-12", 'utc'));
