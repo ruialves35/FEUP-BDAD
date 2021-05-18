@@ -3,13 +3,19 @@
 .nullvalue NULL
 
 
---Esta interrogação destina-se a obter todos os filmes que um dado utilizador (neste caso 1)
--- ainda não tenha visto
 
-SELECT titulo
-FROM Conteudo JOIN Filme ON Conteudo.id = Filme.idConteudo
-WHERE Conteudo.id not in (
-	SELECT idConteudo
-	FROM Historico
-	WHERE Historico.idPerfil = 1
-	)
+-- Selecionar todos os perfis que já viram todos os géneros de conteúdo do site
+DROP VIEW IF EXISTS GenerosHistorico;
+CREATE VIEW GenerosHistorico AS
+SELECT Perfil.id, GeneroConteudo.tipo
+FROM Historico JOIN Perfil ON Perfil.id = Historico.idPerfil
+	JOIN GeneroConteudo ON Historico.idConteudo = GeneroConteudo.idConteudo
+GROUP BY Historico.idPerfil, GeneroConteudo.tipo;
+
+SELECT *
+FROM Perfil
+WHERE Perfil.id not in (
+	SELECT Perfil.id
+	FROM Genero, Perfil
+	WHERE (Perfil.id, Genero.tipo) not in GenerosHistorico
+	);

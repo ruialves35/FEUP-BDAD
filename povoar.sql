@@ -30,6 +30,7 @@ INSERT INTO Conteudo VALUES (6, "Jackie Chan", strftime('%Y-%m-%d', "1999-07-29"
 INSERT INTO Conteudo VALUES (7, "Jackie Chan: Behind the Scenes", strftime('%Y-%m-%d', "1999-07-30", 'utc'), "Behind the scenes do filme: Jackie Chan", 8, 4, "Golden Harvest");
 INSERT INTO Conteudo VALUES (8, "Harry Potter Behind the Scenes", strftime('%Y-%m-%d', "2005-10-27", 'utc'), "Behind the scenes do filme: Harry Potter", 8, 4.7, "Warner Bros");
 INSERT INTO Conteudo VALUES(9, "Game of Thrones", strftime('%Y-%m-%d', "2011-04-17", 'utc'), "Reinos a atacarem se uns aos outros.", 16, 4.9, "HBO");
+INSERT INTO Conteudo VALUES(10, "Elite", strftime('%Y-%m-%d', "2019-06-23", 'utc'), "Discussões de adolescentes e mortes à mistura.", 16, 4.8, "NETFLIX");
 
 INSERT INTO Genero VALUES ("acao");
 INSERT INTO Genero VALUES ("comedia");
@@ -43,7 +44,10 @@ INSERT INTO Genero VALUES ("terror");
 
 INSERT INTO GeneroConteudo VALUES (1, "anime");
 INSERT INTO GeneroConteudo VALUES (1, "comedia");
+INSERT INTO GeneroConteudo VALUES (1, "animacao");
 INSERT INTO GeneroConteudo VALUES (2, "ficcao");
+INSERT INTO GeneroConteudo VALUES (2, "terror");
+INSERT INTO GeneroConteudo VALUES (2, "drama");
 INSERT INTO GeneroConteudo VALUES (3, "drama");
 INSERT INTO GeneroConteudo VALUES (4, "drama");
 INSERT INTO GeneroConteudo VALUES (4, "documentario");
@@ -51,8 +55,11 @@ INSERT INTO GeneroConteudo VALUES (5, "ficcao");
 INSERT INTO GeneroConteudo VALUES (6, "acao");
 INSERT INTO GeneroConteudo VALUES (6, "comedia");
 INSERT INTO GeneroConteudo VALUES (7, "documentario");
+INSERT INTO GeneroConteudo VALUES (7, "romance");
+INSERT INTO GeneroConteudo VALUES (7, "acao");
 INSERT INTO GeneroConteudo VALUES (8, "documentario");
 INSERT INTO GeneroConteudo VALUES (9, "acao");
+INSERT INTO GeneroConteudo VALUES (10, "drama");
 
 INSERT INTO Filme VALUES (2, 150, "Filme Interstellar");
 INSERT INTO Filme VALUES (5, 130, "O calice Ardeu e o Harry foi procurar uma justificacao para isso. Encontrou um monstro e andaram a atirar feitiços um ao outro.");
@@ -61,6 +68,7 @@ INSERT INTO Filme VALUES (6, 180, "Jackie perdeu os oculos e começaram lhe a ba
 INSERT INTO Serie VALUES (1);
 INSERT INTO Serie VALUES (3);
 INSERT INTO Serie VALUES (9);
+INSERT INTO Serie VALUES (10);
 
 INSERT INTO ConteudoEspecial VALUES (4, 60, "Behind the Scene da série Queens Gambit", 3);
 INSERT INTO ConteudoEspecial VALUES (8, 53, "Behind the Scene do filme Harry Potter", 5);
@@ -72,6 +80,7 @@ INSERT INTO Temporada VALUES (3, 2, 9);
 INSERT INTO Temporada VALUES (4, 3, 9);
 INSERT INTO Temporada VALUES (5, 1, 3);
 INSERT INTO Temporada VALUES (6, 2, 3);
+INSERT INTO Temporada VALUES (7, 1, 10);
 
 INSERT INTO Episodio VALUES (1, 1, 24, "Naruto Episódio 1", "A aventura de Naruto começa", 1);
 INSERT INTO Episodio VALUES (2, 2, 54, "Game of Thrones Episodio 2", "O inverno afinal nao e frio, isto vai aquecer.", 2);
@@ -80,6 +89,7 @@ INSERT INTO Episodio VALUES (7, 4, 58, "Game of Thrones Episodio 4", "Morreram o
 INSERT INTO Episodio VALUES (4, 4, 53, "Game of Thrones Ultimo Episodio", "Nao e o ultimo, vamos fazer mais para ganhar mais dinheiro", 4);
 INSERT INTO Episodio VALUES (5, 1, 60, "Queens Gambit and the gamble", "As apostas comecam", 5);
 INSERT INTO Episodio VALUES (6, 1, 58, "The mastermind", "As mentes brilhantes chocam", 6);
+INSERT INTO Episodio VALUES (8, 1, 49, "Aluna nova na escola", "Jess irá pela primeira vez para a Escola. Será que vai ser bem recebida?", 7);
 
 INSERT INTO Qualidade VALUES (144);
 INSERT INTO Qualidade VALUES (240);
@@ -107,6 +117,8 @@ INSERT INTO EpisodioQualidade VALUES (3, 2160, "www.invernoaarder2.com");
 INSERT INTO EpisodioQualidade VALUES (4, 2160, "www.naoeoultimoepisodio.com");
 INSERT INTO EpisodioQualidade VALUES (5, 1080, "www.megadownload.com");
 INSERT INTO EpisodioQualidade VALUES (6, 1080, "www.megadownload.com");
+INSERT INTO EpisodioQualidade VALUES (7, 720, "www.morreramosbons.com");
+INSERT INTO EpisodioQualidade VALUES (8, 2160, "www.eliteefixe.com"); 
 
 INSERT INTO Favorito VALUES (1, 1);
 INSERT INTO Favorito VALUES (1, 2);
