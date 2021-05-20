@@ -5,7 +5,7 @@
 /* 
 	Esta interrogação destina-se a ir buscar uma contagem do género dos filmes
 	que o perfil de um utilizador (neste caso o perfil de id 1) viu, mas que
-	não adicionou aos favoritos. Para além disso, inclui a percentagem de cada categoria.
+	não adicionou aos favoritos (provavelmente não gostou). Para além disso, inclui a percentagem de cada categoria.
 */
 
 DROP VIEW IF EXISTS FavoritosUtilizador;
