@@ -3,8 +3,9 @@
 .nullvalue NULL
 
 
--- Esta query destina-se a obter os filmes, conteudos especiais e séries cujos episódios têm qualidade máxima
--- cuja resolução é a resolução máxima de todos os conteudos
+-- Esta query destina-se a obter os filmes, conteudos especiais e séries
+-- cuja resolução é a resolução máxima de todos os conteudos. No caso das séries todos os
+-- episódios da série têm de ter resolução máxima
 
 
 SELECT Conteudo.titulo
