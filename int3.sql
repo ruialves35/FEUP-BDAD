@@ -4,7 +4,7 @@
 
 -- Esta interrogação destina-se a ir buscar a qualidade máxima de um 
 -- episodio de uma dada temporada de uma série especifica
--- Neste caso vou buscar o Episodio 3 da temporada 3 de
+-- Neste caso vamos buscar o Episodio 3 da temporada 3 de
 -- Game of Thrones
 
 SELECT max(resolucao)
