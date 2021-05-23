@@ -16,6 +16,6 @@ select * from Recomendado;
 insert into Recomendado values(1, 1, 50);
 
 -- Deve funcionar
-insert into Recomendado values(1, 5, 50);
+insert into Recomendado values(1, 6, 50);
 
 select * from Recomendado;

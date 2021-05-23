@@ -1,4 +1,5 @@
 select * from Temporada;
+select * from Episodio;
 
 -- Deve apagar a Temporada 1
 delete from Episodio where id=1;
